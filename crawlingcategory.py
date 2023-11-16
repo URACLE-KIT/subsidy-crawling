@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import pymysql
 
-conn = pymysql.connect(host='127.0.0.1', user='root', password='{userpassword}', db='subsidyapp', charset='utf8')
+conn = pymysql.connect(host='127.0.0.1', user='root', password='1234', db='test', charset='utf8')
 
 cur = conn.cursor()
 # CSV 파일에 저장할 데이터 리스트
