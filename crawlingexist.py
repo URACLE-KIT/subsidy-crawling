@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import pymysql
+
 try:
     conn = pymysql.connect(host='127.0.0.1', user='root', password='1234', db='test', charset='utf8')
 
@@ -15,12 +16,12 @@ try:
     end_page = 839
 
     # startCount 
-    # page_count = 0
     page_count = 1152
 
     # id 
     id = 1
 
+    # 카테고리 count 
     category_id1 = 1788 
     category_id2 = 0 
     category_id3 = 1152 
@@ -199,11 +200,12 @@ try:
             except Exception as e:
                 print(f"An error occurred while processing page {page}, card {card_count}: {e}")
             
-            
+            # 카테고리 종류 확인 
             print("category_count :" , category_count)
-            #id +=1 
+            
             
         page_count += 12
+        # 페이지 확인 
         print("page_count : ", page_count)
 
 except Exception as e:
